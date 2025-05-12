@@ -7,7 +7,7 @@ Cat::Cat(void): _brain(new Brain())
 	_type = "Cat";
 }
 
-Cat::Cat(const Cat& ref)
+Cat::Cat(const Cat& ref): Animal(ref)
 {
 	std::cout << "Cat copy constructor" << std::endl;
 	*this = ref;

@@ -6,7 +6,7 @@ Cat::Cat(void)
 	_type = "Cat";
 }
 
-Cat::Cat(const Cat& ref)
+Cat::Cat(const Cat& ref): Animal(ref)
 {
 	*this = ref;
 }

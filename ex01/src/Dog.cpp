@@ -8,7 +8,7 @@ Dog::Dog(void)
 	_type = "Dog";
 }
 
-Dog::Dog(const Dog& ref)
+Dog::Dog(const Dog& ref): Animal(ref)
 {
 	std::cout << "Dog copy constructor" << std::endl;
 	*this = ref;

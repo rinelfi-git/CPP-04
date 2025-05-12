@@ -6,7 +6,7 @@ Dog::Dog(void)
 	_type = "Dog";
 }
 
-Dog::Dog(const Dog& ref)
+Dog::Dog(const Dog& ref): Animal(ref)
 {
 	*this = ref;
 }

@@ -14,12 +14,6 @@ Dog::Dog(const Dog& ref): Animal(ref)
 	_brain = new Brain(*ref._brain);
 }
 
-Dog::Dog(const Dog* ref)
-{
-	std::cout << "Dog copy constructor" << std::endl;
-	*this = *ref;
-}
-
 Animal*	Dog::clone() const
 {
 	return new Dog(*this);

@@ -14,13 +14,6 @@ Cat::Cat(const Cat& ref): Animal(ref)
 	_brain = new Brain(*ref._brain);
 }
 
-Cat::Cat(const Cat* ref)
-{
-	std::cout << "Cat copy constructor" << std::endl;
-	_type = ref._type;
-	_brain = new Brain(*ref._brain);
-}
-
 Animal*	Cat::clone() const
 {
 	return new Cat(*this);

@@ -6,7 +6,7 @@ WrongCat::WrongCat(void)
 	_type = "WrongCat";
 }
 
-WrongCat::WrongCat(const WrongCat& ref)
+WrongCat::WrongCat(const WrongCat& ref): WrongAnimal(ref)
 {
 	*this = ref;
 }

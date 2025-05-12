@@ -10,8 +10,8 @@ int	main(void)
 	const Animal* right_animal = new Animal();
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
-	Animal* dog_copy = dog->clone();
-	Animal* cat_copy = cat->clone();
+	const Animal* dog_copy = dog->clone();
+	const Animal* cat_copy = cat->clone();
 	std::cout << dog->type() << " " << std::endl;
 	std::cout << cat->type() << " " << std::endl;
 	std::cout << dog_copy->type() << " " << std::endl;

@@ -11,7 +11,9 @@ class Dog: public Animal
 	public:
 		Dog(void);
 		Dog(const Dog& ref);
+		Dog(const Dog* ref);
 		~Dog();
+		Animal* clone() const;
 
 		Dog& operator=(const Dog& ref);
 

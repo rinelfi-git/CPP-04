@@ -12,6 +12,11 @@ Animal::Animal(const Animal& ref)
 	*this = ref;
 }
 
+Animal*	Animal::clone() const
+{
+	return new Animal(*this);
+}
+
 Animal& Animal::operator=(const Animal& ref)
 {
 	if (this != &ref)

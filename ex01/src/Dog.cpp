@@ -13,6 +13,17 @@ Dog::Dog(const Dog& ref)
 	*this = ref;
 }
 
+Dog::Dog(const Dog* ref)
+{
+	std::cout << "Dog copy constructor" << std::endl;
+	*this = *ref;
+}
+
+Animal*	Dog::clone() const
+{
+	return new Dog(*this);
+}
+
 Dog& Dog::operator=(const Dog& ref)
 {
 	if (this != &ref)

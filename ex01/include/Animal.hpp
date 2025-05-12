@@ -11,6 +11,7 @@ class Animal
 		Animal(void);
 		Animal(const Animal& ref);
 		virtual ~Animal();
+		virtual Animal* clone() const;
 
 		Animal& operator=(const Animal& ref);
 

@@ -13,6 +13,17 @@ Cat::Cat(const Cat& ref)
 	*this = ref;
 }
 
+Cat::Cat(const Cat* ref)
+{
+	std::cout << "Cat copy constructor" << std::endl;
+	*this = *ref;
+}
+
+Animal*	Cat::clone() const
+{
+	return new Cat(*this);
+}
+
 Cat& Cat::operator=(const Cat& ref)
 {
 	if (this != &ref)

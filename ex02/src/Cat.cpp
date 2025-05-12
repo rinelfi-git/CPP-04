@@ -10,13 +10,15 @@ Cat::Cat(void): _brain(new Brain())
 Cat::Cat(const Cat& ref): Animal(ref)
 {
 	std::cout << "Cat copy constructor" << std::endl;
-	*this = ref;
+	_type = ref._type;
+	_brain = new Brain(*ref._brain);
 }
 
 Cat::Cat(const Cat* ref)
 {
 	std::cout << "Cat copy constructor" << std::endl;
-	*this = *ref;
+	_type = ref._type;
+	_brain = new Brain(*ref._brain);
 }
 
 Animal*	Cat::clone() const
@@ -30,9 +32,9 @@ Cat& Cat::operator=(const Cat& ref)
 	{
 		std::cout << "Cat assignment constructor" << std::endl;
 		_type = ref._type;
-		delete _brain;
-		_brain = new Brain();
-		*_brain = *ref._brain;
+		if (_brain)
+			delete _brain;
+		_brain = new Brain(*ref._brain);
 	}
 	return *this;
 }

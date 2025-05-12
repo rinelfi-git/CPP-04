@@ -10,7 +10,8 @@ Dog::Dog(void): _brain(new Brain())
 Dog::Dog(const Dog& ref): Animal(ref)
 {
 	std::cout << "Dog copy constructor" << std::endl;
-	*this = ref;
+	_type = ref._type;
+	_brain = new Brain(*ref._brain);
 }
 
 Dog::Dog(const Dog* ref)
@@ -30,9 +31,9 @@ Dog& Dog::operator=(const Dog& ref)
 	{
 		std::cout << "Dog assignment constructor" << std::endl;
 		_type = ref._type;
-		delete _brain;
-		_brain = new Brain();
-		*_brain = *ref._brain;
+		if (_brain)
+			delete _brain;
+		_brain = new Brain(*ref._brain);
 	}
 	return *this;
 }

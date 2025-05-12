@@ -1,9 +1,8 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat(void)
+Cat::Cat(void): _brain(new Brain())
 {
-	_brain = new Brain();
 	std::cout << "Cat constructor" << std::endl;
 	_type = "Cat";
 }
@@ -11,7 +10,8 @@ Cat::Cat(void)
 Cat::Cat(const Cat& ref): Animal(ref)
 {
 	std::cout << "Cat copy constructor" << std::endl;
-	*this = ref;
+	_type = ref._type;
+	_brain = new Brain(*ref._brain);
 }
 
 Animal*	Cat::clone() const

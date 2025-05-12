@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 #include <iostream>
 
-Dog::Dog(void)
+Dog::Dog(void): _brain(new Brain())
 {
 	_brain = new Brain();
 	std::cout << "Dog constructor" << std::endl;
@@ -11,7 +11,8 @@ Dog::Dog(void)
 Dog::Dog(const Dog& ref): Animal(ref)
 {
 	std::cout << "Dog copy constructor" << std::endl;
-	*this = ref;
+	_type = ref._type;
+	_brain = new Brain(*ref._brain);
 }
 
 Animal*	Dog::clone() const

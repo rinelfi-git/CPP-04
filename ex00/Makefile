@@ -3,10 +3,10 @@ CPPC = c++
 CPPARG = -Wall -Wextra -Werror -std=c++98
 SRC_DIR = src
 OBJ_DIR = object
-SRCs = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRCs = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ_PATH = $(addprefix $(OBJ_DIR)/,$(SRCs:.cpp=.o))
 SRC_PATH = $(addprefix $(SRC_DIR)/,$(SRCs))
-INCLUDE_PATH = -Iheader
+INCLUDE_PATH = -Iinclude
 
 $(NAME): $(OBJ_PATH)
 	$(CPPC) $(CPPARG) $(OBJ_PATH) -o $@

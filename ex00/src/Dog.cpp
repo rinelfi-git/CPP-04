@@ -23,7 +23,7 @@ Dog& Dog::operator=(const Dog& ref)
 Dog::~Dog()
 {}
 
-void	Dog::makeSound(void)
+void	Dog::makeSound(void) const
 {
 	std::cout << "Ouaf koahy !!" << std::endl;
 }

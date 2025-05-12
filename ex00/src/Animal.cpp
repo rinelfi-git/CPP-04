@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 #include <iostream>
 
-Animal::Animal(void)
+Animal::Animal(void): _type("wild animal")
 {}
 
 Animal::Animal(const Animal& ref)
@@ -21,7 +21,7 @@ Animal& Animal::operator=(const Animal& ref)
 Animal::~Animal()
 {}
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
 	std::cout << "Moooo or Coin. I don't know, I'm just an animal." << std::endl;
 }

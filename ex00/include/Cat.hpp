@@ -12,6 +12,6 @@ class Cat: public Animal
 
 		Cat& operator=(const Cat& ref);
 
-		void	makeSound(void);
+		void	makeSound(void) const;
 };
 #endif

@@ -23,7 +23,7 @@ Cat& Cat::operator=(const Cat& ref)
 Cat::~Cat()
 {}
 
-void	Cat::makeSound(void)
+void	Cat::makeSound(void) const
 {
 	std::cout << "Nyan desu yo!!" << std::endl;
 }

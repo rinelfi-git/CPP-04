@@ -18,5 +18,6 @@ class Dog: public Animal
 		Dog& operator=(const Dog& ref);
 
 		void	makeSound(void) const;
+		const Brain*	brain(void) const;
 };
 #endif

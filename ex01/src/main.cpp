@@ -11,6 +11,7 @@ int	main(void)
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
 	Animal* dog_copy = dog->clone();
+	Animal* cat_copy = cat->clone();
 	std::cout << dog->type() << " " << std::endl;
 	std::cout << cat->type() << " " << std::endl;
 	std::cout << dog_copy->type() << " " << std::endl;
@@ -22,5 +23,6 @@ int	main(void)
 	delete cat;
 	delete dog;
 	delete dog_copy;
+	delete cat_copy;
 	return 0;
 }

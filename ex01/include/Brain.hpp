@@ -12,6 +12,7 @@ class Brain
 		Brain(void);
 		Brain(const Brain& ref);
 		~Brain();
+		Brain*	clone(void) const;
 
 		Brain& operator=(const Brain& ref);
 

@@ -18,5 +18,6 @@ class Cat: public Animal
 		Cat& operator=(const Cat& ref);
 
 		void	makeSound(void) const;
+		const Brain*	brain(void) const;
 };
 #endif

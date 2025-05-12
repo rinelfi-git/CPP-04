@@ -48,3 +48,8 @@ void	Cat::makeSound(void) const
 {
 	std::cout << "Nyan desu yo!!" << std::endl;
 }
+
+const Brain*	Cat::brain(void) const
+{
+	return _brain;
+}

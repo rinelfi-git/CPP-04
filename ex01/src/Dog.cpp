@@ -1,8 +1,9 @@
 #include "Dog.hpp"
 #include <iostream>
 
-Dog::Dog(void): _brain(new Brain())
+Dog::Dog(void)
 {
+	_brain = new Brain();
 	std::cout << "Dog constructor" << std::endl;
 	_type = "Dog";
 }

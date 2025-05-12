@@ -12,7 +12,7 @@ class Dog: public Animal
 		Dog(void);
 		Dog(const Dog& ref);
 		~Dog();
-		Animal* clone() const;
+		Animal* clone(void) const;
 
 		Dog& operator=(const Dog& ref);
 

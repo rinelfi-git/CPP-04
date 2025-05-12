@@ -12,7 +12,7 @@ class Cat: public Animal
 		Cat(void);
 		Cat(const Cat& ref);
 		~Cat();
-		Animal* clone() const;
+		Animal* clone(void) const;
 
 		Cat& operator=(const Cat& ref);
 

@@ -17,11 +17,6 @@ Brain::Brain(const Brain& ref)
 	*this = ref;
 }
 
-Brain*	Brain::clone(void) const
-{
-	return (new Brain(*this));
-}
-
 Brain& Brain::operator=(const Brain& ref)
 {
 	if (this != &ref)

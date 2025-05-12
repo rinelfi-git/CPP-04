@@ -1,8 +1,9 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat(void): _brain(new Brain())
+Cat::Cat(void)
 {
+	_brain = new Brain();
 	std::cout << "Cat constructor" << std::endl;
 	_type = "Cat";
 }

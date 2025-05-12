@@ -3,7 +3,6 @@
 
 Dog::Dog(void): _brain(new Brain())
 {
-	_brain = new Brain();
 	std::cout << "Dog constructor" << std::endl;
 	_type = "Dog";
 }

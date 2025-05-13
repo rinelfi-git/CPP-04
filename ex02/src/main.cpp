@@ -17,8 +17,32 @@ int	main(void)
 	dog->makeSound();
 	dog_copy->makeSound();
 
+	const unsigned int half = 10;
+	const Animal* dogs[half];
+	const Animal* cats[half];
+	long	i = 0;
+
+	while (i < half)
+		dogs[i++] = dog->clone();
+	i = 0;
+	while (i < half)
+		cats[i++] = cat->clone();
+
+	i = 0;
+	while (i < half)
+		cats[i++]->makeSound();
+	i = 0;
+	while (i < half)
+		dogs[i++]->makeSound();
+
 	delete cat;
 	delete dog;
 	delete dog_copy;
+	i = 0;
+	while (i < half)
+		delete cats[i++];
+	i = 0;
+	while (i < half)
+		delete dogs[i++];
 	return 0;
 }

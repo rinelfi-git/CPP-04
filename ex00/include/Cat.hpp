@@ -9,7 +9,7 @@ class Cat: public Animal
 		Cat(void);
 		Cat(const Cat& ref);
 		~Cat();
-		virtual Animal* clone(void) const;
+		Animal* clone(void) const;
 
 		Cat& operator=(const Cat& ref);
 

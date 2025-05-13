@@ -10,7 +10,8 @@ class WrongAnimal
 	public:
 		WrongAnimal(void);
 		WrongAnimal(const WrongAnimal& ref);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
+		virtual WrongAnimal* clone(void) const;
 
 		WrongAnimal& operator=(const WrongAnimal& ref);
 

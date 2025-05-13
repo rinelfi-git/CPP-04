@@ -9,6 +9,7 @@ class WrongCat: public WrongAnimal
 		WrongCat(void);
 		WrongCat(const WrongCat& ref);
 		~WrongCat();
+		virtual WrongAnimal* clone(void) const;
 
 		WrongCat& operator=(const WrongCat& ref);
 

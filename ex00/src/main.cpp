@@ -11,6 +11,7 @@ int	main(void)
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
 	const WrongAnimal* wrong_cat = new WrongCat();
+	WrongAnimal* another_wrong = wrong_cat->clone();
 	std::cout << dog->type() << " " << std::endl;
 	std::cout << cat->type() << " " << std::endl;
 	std::cout << wrong_cat->type() << " " << std::endl;
@@ -18,10 +19,12 @@ int	main(void)
 	dog->makeSound();
 	right_animal->makeSound();
 	wrong_cat->makeSound();
+	another_wrong->makeSound();
 
 	delete right_animal;
 	delete cat;
 	delete dog;
 	delete wrong_cat;
+	delete another_wrong;
 	return 0;
 }

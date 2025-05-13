@@ -14,7 +14,7 @@ Brain::Brain(void)
 Brain::Brain(const Brain& ref)
 {
 	std::cout << "Brain copy constructor" << std::endl;
-	*this = ref;
+	ideas(ref._ideas);
 }
 
 Brain& Brain::operator=(const Brain& ref)

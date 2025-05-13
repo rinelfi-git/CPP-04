@@ -7,15 +7,15 @@ Dog::Dog(void): _brain(new Brain())
 	_type = "Dog";
 }
 
-Dog::Dog(const Dog& ref): Animal(ref)
+Dog::Dog(const Dog& ref): Animal(ref), _brain(new Brain(*ref._brain))
 {
 	std::cout << "Dog copy constructor" << std::endl;
 	_type = ref._type;
-	_brain = new Brain(*ref._brain);
 }
 
 Animal*	Dog::clone() const
 {
+	std::cout << "Dog cloning" << std::endl;
 	return new Dog(*this);
 }
 
@@ -41,7 +41,7 @@ Dog::~Dog()
 
 void	Dog::makeSound(void) const
 {
-	std::cout << "Ouaf koahy !!" << std::endl;
+	std::cout << "Wooooooo" << std::endl;
 }
 
 const Brain*	Dog::brain(void) const

@@ -16,6 +16,7 @@ Dog::Dog(const Dog& ref): Animal(ref)
 
 Animal*	Dog::clone() const
 {
+	std::cout << "Dog cloning" << std::endl;
 	return new Dog(*this);
 }
 
@@ -41,7 +42,7 @@ Dog::~Dog()
 
 void	Dog::makeSound(void) const
 {
-	std::cout << "Ouaf koahy !!" << std::endl;
+	std::cout << "Wooooooo" << std::endl;
 }
 
 const Brain*	Dog::brain(void) const

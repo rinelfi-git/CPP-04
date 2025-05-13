@@ -7,15 +7,15 @@ Cat::Cat(void): _brain(new Brain())
 	_type = "Cat";
 }
 
-Cat::Cat(const Cat& ref): Animal(ref)
+Cat::Cat(const Cat& ref): Animal(ref),  _brain(new Brain(*ref._brain))
 {
 	std::cout << "Cat copy constructor" << std::endl;
 	_type = ref._type;
-	_brain = new Brain(*ref._brain);
 }
 
 Animal*	Cat::clone() const
 {
+	std::cout << "Cat cloning" << std::endl;
 	return new Cat(*this);
 }
 
@@ -41,7 +41,7 @@ Cat::~Cat()
 
 void	Cat::makeSound(void) const
 {
-	std::cout << "Nyan desu yo!!" << std::endl;
+	std::cout << "Miaou" << std::endl;
 }
 
 const Brain*	Cat::brain(void) const

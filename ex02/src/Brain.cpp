@@ -38,6 +38,8 @@ const std::string*	Brain::ideas(void) const
 }
 void				Brain::ideas(const std::string* ideas)
 {
+	if (!ideas)
+		return ;
 	int	i;
 
 	i = -1;

@@ -48,3 +48,10 @@ const Brain*	Cat::brain(void) const
 {
 	return _brain;
 }
+
+void			Cat::brain(const Brain* brain)
+{
+	if (_brain)
+		delete _brain;
+	_brain = new Brain(*brain);
+}

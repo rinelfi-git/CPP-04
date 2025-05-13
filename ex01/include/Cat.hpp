@@ -18,5 +18,6 @@ class Cat: public Animal
 
 		void	makeSound(void) const;
 		const Brain*	brain(void) const;
+		void			brain(const Brain* brain);
 };
 #endif

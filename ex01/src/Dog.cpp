@@ -48,3 +48,10 @@ const Brain*	Dog::brain(void) const
 {
 	return _brain;
 }
+
+void			Dog::brain(const Brain* brain)
+{
+	if (_brain)
+		delete _brain;
+	_brain = new Brain(*brain);
+}

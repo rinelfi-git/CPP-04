@@ -17,7 +17,7 @@ int	main(void)
 	dog->makeSound();
 	dog_copy->makeSound();
 
-	const unsigned int half = 10;
+	const unsigned int half = 2;
 	const Animal* dogs[half];
 	const Animal* cats[half];
 	long	i = 0;
